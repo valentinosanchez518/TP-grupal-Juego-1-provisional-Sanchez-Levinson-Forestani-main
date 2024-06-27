@@ -8,6 +8,9 @@ public class poductosScript : MonoBehaviour
     public GameObject[] alimentos1;
     public GameObject[] alimentos2;
 
+    public Text Txtprecio1;
+    public Text Txtprecio2;
+
     int [] precios;
 
    
@@ -58,7 +61,15 @@ public class poductosScript : MonoBehaviour
         {
         int nroR = Random.Range(0, 13);
             Debug.Log(nroR);
-            Debug.Log(precios[nroR]);
+            int precio1 = precios[nroR];
+            Txtprecio1.text = precio1.ToString();
+        }
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            int nroR2 = Random.Range(0, 13);
+            Debug.Log(nroR2);
+            int precio2 = precios[nroR2];
+            Txtprecio2.text = (precio2).ToString();
         }
     }
 }
